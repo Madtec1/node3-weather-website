@@ -26,7 +26,7 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('',(req, res)=>{ //il primo argomento e' empty perche' va in homepage
     res.render('index',{
-        title:'Wether App',
+        title:'Weather App',
         name:'Alberto'
     })
 })
