@@ -14,7 +14,8 @@ const forecast=(latitude,longitude, callback)=>{
         else{
             const temperature=body.current.temperature
             const feelslike=body.current.feelslike
-            callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+ temperature+' degrees out. It feels like '+feelslike+' degrees out.')
+            const wind_speed=body.current.wind_speed
+            callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+ temperature+' degrees out. It feels like '+feelslike+' degrees out. Pressure is '+wind_speed)
         }
     })
 }
